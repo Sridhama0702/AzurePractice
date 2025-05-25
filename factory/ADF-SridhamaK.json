@@ -1,0 +1,9 @@
+{
+	"name": "ADF-SridhamaK",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8efc36e6-9807-4217-9130-45874405f9e8",
+		"tenantId": "2161a74d-1c3e-4d34-a8c8-131360d2e92c"
+	}
+}

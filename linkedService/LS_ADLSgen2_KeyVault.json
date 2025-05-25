@@ -1,0 +1,19 @@
+{
+	"name": "LS_ADLSgen2_KeyVault",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://storageaccountsridhamak.dfs.core.windows.net/",
+			"accountKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AzureKeyVaultSK",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "AzureSecretKeySK"
+			}
+		}
+	}
+}

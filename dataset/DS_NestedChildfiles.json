@@ -1,0 +1,32 @@
+{
+	"name": "DS_NestedChildfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSgen2_KeyVault",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderList": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().FolderList",
+					"type": "Expression"
+				},
+				"fileSystem": "executeplsource"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

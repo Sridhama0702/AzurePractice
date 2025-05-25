@@ -1,0 +1,17 @@
+{
+	"name": "DS_SQLDB_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZURESQLDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SQLDBNEW",
+			"table": "Teams"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "LS_AZURESQLDB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sridhamasqlserver.database.windows.net",
+			"database": "SridhamaKDB",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "SridhamaK",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AzureKeyVaultSK",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "SQLServerPassword"
+			}
+		}
+	}
+}
